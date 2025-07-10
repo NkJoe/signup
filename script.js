@@ -41,3 +41,15 @@ document.getElementById("signupform").addEventListener("submit", function(event)
     message.style.color = "green";
 
 });
+
+
+document.getElementById('menuToggle').addEventListener('click', function () {
+  const navLinks = document.getElementById('navLinks');
+  navLinks.classList.toggle('show');
+});
+document.querySelectorAll('.nav-links li a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.nav-links li a').forEach(item => item.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
