@@ -135,7 +135,7 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: contents;
   }
 
   .nav-links {
