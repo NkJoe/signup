@@ -139,6 +139,11 @@ body {
   border: none;
   cursor: pointer;
 }
+@media (min-width: 640px) {
+  .nav-links {
+    display: flex;
+  }
+}
 /* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -156,7 +161,7 @@ body {
 
   .nav-menu {
     display: none;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
     top: 60px;
     right: 20px;
