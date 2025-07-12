@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;;
+    background-color: #1176089a;;
     display: flow-root;
     align-items: center;
     justify-content: center;
@@ -37,8 +37,8 @@ h1, h2, h3 {
     max-width: 600px;
     margin: auto;
     padding: 30px;
-    background: #ffffff;
-    border-radius: 5px;
+    background: #cbc3c3;
+    border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,7 +106,6 @@ body {
 
 .navbar .nav-links {
   list-style: none;
-  display: flex;
   gap: 20px;
 }
 
@@ -131,13 +130,45 @@ body {
   border: none;
   cursor: pointer;
 }
-
+ /* Toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 /* Mobile styles */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: contents;
+    display: block;
+  font-size: 26px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
   }
 
+  .menu-toggle.active {
+    color: #02330ddc;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #444;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+    .nav-menu.show {
+        display: flex;
+    }
+    
   .nav-links {
     display: none;
     flex-direction: column;

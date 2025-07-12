@@ -42,14 +42,21 @@ document.getElementById("signupform").addEventListener("submit", function(event)
 
 });
 
-
 document.getElementById('menuToggle').addEventListener('click', function () {
-  const navLinks = document.getElementById('navLinks');
-  navLinks.classList.toggle('show');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+        // Toggle the visibility of the navigation links
+        navLinks.classList.toggle('show'); //'show' class to toggle visibility
+        // Change the icon based on the visibility state
+        if (navLinks.classList.contains('show')) {
+            menuToggle.innerHTML = '&#10005;'; // Change to close icon
+        }
+        else {
+            menuToggle.innerHTML = '&#9776;'; // Change back to menu icon
+        }
+    });
+
 });
-document.querySelectorAll('.nav-links li a').forEach(link => {
-  link.addEventListener('click', function() {
-    document.querySelectorAll('.nav-links li a').forEach(item => item.classList.remove('active'));
-    this.classList.add('active');
-  });
-});
+
